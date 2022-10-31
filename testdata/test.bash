@@ -3,7 +3,8 @@
 set -euo pipefail
 shopt -s nullglob globstar
 
-git clone https://github.com/robertmin1/UDP-Sever && cd UDP-Sever/testdata
+git clone https://github.com/robertmin1/UDP-Sever && cd UDP-sever
+cd testdata
 go run make-file.go
 cd ..
 go run UDP-sever.go
