@@ -27,9 +27,9 @@ func main() {
 		}
 
 		data := strings.TrimSpace(string(message[:rlen]))
-		if FileExists("/testdata/text.txt") {
+		if FileExists("testdata/text.txt") {
 			wdata := []byte(data)
-			err := os.WriteFile("/testdata/text.txt",wdata,0644)
+			err := os.WriteFile("testdata/text.txt",wdata,0644)
 			if err != nil {
 				panic(err)
 			}
