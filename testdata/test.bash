@@ -8,7 +8,7 @@ cd testdata
 go run make-file.go
 cd ..
 
-go run UDP-sever.go
+go run UDP-server.go
 
 if grep -i "hello world" testdata/text.txt; then
     exit 0
