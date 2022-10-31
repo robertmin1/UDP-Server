@@ -24,7 +24,7 @@ func main() {
 		message := make([]byte, 20)
 
 		if FileExists("testdata/text.txt") {
-			_, err := exec.Command("/bin/bash", "send-to-sever.bash").Output()
+			_, err := exec.Command("/bin/bash", "send-to-server.bash").Output()
 			if err != nil {
 				panic(err)
 			}
