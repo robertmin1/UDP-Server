@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	file, err := os.Create("testdata/text.txt")
+	file, err := os.Create("text.txt")
     if err != nil {
         log.Fatal(err)
     }
