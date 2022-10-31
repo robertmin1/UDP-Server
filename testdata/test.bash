@@ -9,7 +9,7 @@ cd ..
 go run UDP-sever.go
 xdotool key ctrl+alt+t
 
-./send-to-sever.sh
+./send-to-sever.bash
 if grep -i "hello world" /testdata/test.txt; then
     return 0
 else
