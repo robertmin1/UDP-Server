@@ -11,7 +11,7 @@ cd ..
 go run UDP-sever.go
 
 if grep -i "hello world" /testdata/test.txt; then
-    return 0
+    exit 0
 else
-    return 1
+    exit 1
 fi
