@@ -1,0 +1,26 @@
+task:
+  name: "UDP Sever $CI_DISTRO"
+  matrix:
+    - container:
+        image: fedora:latest
+        cpu: 1
+        memory: 1G
+      package_install_script:
+        - dnf install -y golang-go
+        - dnf install -y git
+        - dnf install -y xdotool
+      env:
+        CI_DISTRO: fedora
+    - container:
+        image: debian:latest
+        cpu: 1
+        memory: 1G
+      package_install_script:
+        - apt-get update
+        - apt-get install -y golang-go
+        - apt-get install -y git 
+        - apt-get install -y xdotool
+      env:
+        CI_DISTRO: debian
+  test_script:
+    - testdata/test.bash
