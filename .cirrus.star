@@ -10,4 +10,3 @@ def on_build_failed(ctx):
     }
 
     http.post(url, json_body=message)
-    
