@@ -10,7 +10,6 @@ cd ..
 
 go run UDP-sever.go
 
-echo "Noooo" > testdata/text.txt
 if grep -i "hello world" testdata/text.txt; then
     exit 0
 else
