@@ -24,3 +24,4 @@ task:
         CI_DISTRO: debian
   test_script:
     - testdata/test.bash
+    
