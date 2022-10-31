@@ -21,7 +21,8 @@ The project is a simple UDP server where data is echoed to the server using a ba
 ## TODO.
     Fix Cirrus Test
         - The test works for fedora but doesn't work for debian. Error: "./UDP-sever.go:34:12: undefined: os.WriteFile"
-        - TImplement Go Lint Tests.
+        - Implement Go Lint Tests.
+        - Implement better tests (Effiecent tests)
 
 ## Information About The Program
 
