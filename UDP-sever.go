@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"net"
-	"strings"
 	"os"
+	"os/exec"
+	"strings"
 )
 
 func main() {
@@ -26,14 +27,22 @@ func main() {
 			panic(err)
 		}
 
-		data := strings.TrimSpace(string(message[:rlen]))
 		if FileExists("testdata/text.txt") {
-			wdata := []byte(data)
-			err := os.WriteFile("testdata/text.txt",wdata,0644)
+			_, err := exec.Command("/bin/bash", "send-to-sever.bash").Output()
 			if err != nil {
 				panic(err)
 			}
+			data := strings.TrimSpace(string(message[:rlen]))
+			wdata := []byte(data)
+			err1 := os.WriteFile("testdata/text.txt",wdata,0644)
+			if err1 != nil {
+				panic(err1)
+			}
+			os.Exit(0)
 		}
+
+		data := strings.TrimSpace(string(message[:rlen]))
+		
 		fmt.Printf("received: %s from %s\n", data, remote)
 	}
 }
