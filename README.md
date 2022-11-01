@@ -14,7 +14,7 @@ The project is a simple UDP server where data is echoed to the server using a ba
 
 2. Run `go run UDP-server.go` to start up the server
 
-4. Open a separate terminal and run `./send-to-server` to echo data to the server.
+4. Open a separate terminal and run `./send-to-server.bash` to echo data to the server.
 
 5. The echoed data `hello world` will be displayed in the server terminal
 
